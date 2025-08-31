@@ -31,11 +31,19 @@ body {
   padding: 15px;
 }
 
+.hamburger {
+  display: block;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+}
+
 .nav-links {
   list-style: none;
   display: flex;
   gap: 40px;
 }
+
 
 .nav-links li a {
   text-decoration: none;
@@ -478,13 +486,6 @@ body {
   line-height: 1.2;
   max-width: 1300px;
   text-align: left;
-}
-
-.hamburger {
-  display: none;
-  font-size: 28px;
-  color: #fff;
-  cursor: pointer;
 }
 
 /* Responsive Styles */
