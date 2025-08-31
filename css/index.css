@@ -1,0 +1,657 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: red;
+  color: #FFFFFF;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+.navigation-bar {
+  background: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 50px;
+  padding-left: 50px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nba2k-logo {
+  height: 30px;
+  width: auto;
+  padding: 15px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 10px 0;
+}
+
+.nav-links li a:hover {
+  color: #E31837;
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: var(--nba-red);
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+.content-1 {
+  position: relative;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 20px;
+  text-align: center;
+  padding: 64px;
+  overflow: hidden;
+}
+
+.video-background {
+  object-fit: cover;
+  object-position: center top;
+  filter: brightness(0.8);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+}
+
+.content-1-button{
+  border: none;
+  background: #E31837;
+  color: #FFFFFF;
+  padding: 16px 32px;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.content-1-button:hover {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+.content-2 {
+  background-image: url('/images/nba2k_aa_blacktop_d.KzHyaPnx.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 210px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 5%;
+}
+
+.content-2-text{
+  font-size: 24px;
+  line-height: 1.7;
+  color: #B0B3B8;
+}
+
+.world-of-2k {
+  background:#000000;
+  padding: 80px 5%;
+}
+
+.world-of-2k-iframe {
+  width: 100%;
+  height: 675px;
+  border: none;
+  border-radius: 8px;
+  margin: 0 auto;
+  display: block;
+}
+
+.content-3{
+  background: #FFFFFF;
+  color:#0D1117;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 5%;
+
+  a{
+    text-decoration: none;
+  }
+}
+
+.games-section-header {
+  font-family: 'Oswald', sans-serif;
+  font-size: 45px;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.games{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 32px;
+}
+
+.game-cards{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-card-image{
+  max-width: 450px;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+.game-title{
+  font-family: 'Oswald', sans-serif;
+  font-size: 30px;
+  font-weight: 600;  
+  color: #0D1117;
+}
+
+.learn-button {
+  background: transparent;
+  border: none;
+  color: #E31837;
+  font-size: 22px;
+  font-weight: -100;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.socials{
+  display: flex;
+  flex-direction: column;
+  background: #0D1117;
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 64px;
+}
+
+.socials-header{
+  font-family: 'Oswald', sans-serif;
+  font-size: 38px;
+  font-weight: 1000;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.social-box{
+  display: flex;
+  gap: 30px;
+}
+
+.social-icon-container {  
+  background-color: #E31837;
+  border: 2px solid #E31837;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  width: 110px;
+  height: 75px;
+}
+
+.social-icon-container:hover {
+  background-color: #FFFFFF;
+  border: 2px solid #FFFFFF;
+}
+
+.social-icon { 
+  width: 50px;
+  height: 50px;
+}
+
+.content-4 {
+  background: #FFFFFF;
+  color: #000000;
+  padding: 80px 5%;
+  display: flex;
+  gap: 60px;
+  align-items: center;
+
+  a{
+    align-self: center;
+  }
+}
+
+.content-box-text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  row-gap: 32px;
+}
+
+.content-header {
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+.content-description {
+  text-align: left;
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 650;
+}
+.content-learn-button {
+  background-color: #0D1117;
+  color: #FFFFFF;
+  border: none;
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.content-learn-button:hover {
+  background-color: #C51230;
+  color: #FFFFFF;
+}
+
+.content-box-image {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-image{
+  width: 100%;
+  height: auto;
+}
+
+.content-5{
+  background-color: #000000;
+  color: #FFFFFF;
+  padding: 50px 5%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.content-5-header {
+  font-family: 'Oswald', sans-serif;
+  font-size: 38px;
+  font-weight: 800;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.content-5-description {
+  font-size: 20px;
+  font-weight: 450;
+  line-height: 1.2;
+  max-width: 880px;
+  margin-bottom: 40px;
+
+}
+
+.content-5-button {
+  background-color: #E32636;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  border: none;
+  padding: 12px 16px;
+  font-size: 20px;
+  font-weight: 800;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+.content-5-button:hover {
+  background: #FFFFFF;
+  color: #0D1117;
+}
+
+.content-6 {
+  background-color: #E32636;
+  color: #0D1117;
+  padding: 80px 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  a{
+    align-self: center;
+  }
+}
+
+.content-6-learn-button {
+  background-color: #0D1117;
+  color: #FFFFFF;
+  border: none;
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.content-6-learn-button:hover {
+  background-color: #FFFFFF;
+  color: #0D1117;
+}
+
+
+.footer{
+  background-color: #000000;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  padding: 64px;
+}
+
+.footer-socials{
+  display: flex;
+  gap: 54px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-social-icon {
+  width: 54px;
+  height: 54px;
+}
+
+.footer-nba2klogo {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-2klogo-icon {
+  width: 74px;
+  height: auto;
+}
+
+.footer-nbalogo-icon{
+  width: 74px;
+  height: auto;
+}
+
+.footer-esrblogo-icon{
+  width: auto;
+  height: 74px;
+}
+
+.footer-links{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.footer-links a:hover {
+  color: #E31837;
+}
+
+.footer-copyright {
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2;
+  max-width: 1300px;
+  text-align: left;
+}
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+
+
+@media (max-width: 992px) {
+
+  .navigation-bar {
+    gap: 200px;
+    padding: 0 20px;
+  }
+
+  .content-2-text {
+    font-size: 20px;
+  }
+
+  .games {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .game-cards {
+    width: 100%;
+  }
+
+  .social-box {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .content-4, .content-6 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .content-box-text, .content-box-image {
+    width: 100%;
+  }
+
+  .content-header {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navigation-bar {
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+
+  .hamburger {
+    display: block; 
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    background: #000;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .nav-links.show {
+    display: flex; /* show when toggled */
+  }
+
+  .nav-links li a {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .content-1 {
+    height: 400px;
+    padding: 40px 20px;
+  }
+
+  .content-1-button {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+
+  .content-2-text {
+    font-size: 16px;
+  }
+
+  .world-of-2k-iframe {
+    height: 250px;
+  }
+
+  .games {
+    flex-direction: column;
+    align-items: center;
+  }
+  .game-cards {
+    width: 100%;
+  }
+
+  .social-box {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .social-icon-container {
+    width: 80px;
+    height: 60px;
+  }
+
+  .content-header {
+    font-size: 24px;
+  }
+
+  .content-description {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .content-5-header {
+    font-size: 26px;
+  }
+
+  .footer{
+    padding-right: 2px;
+    padding-left: 2px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-socials {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .footer-copyright {
+    padding: 16px;
+  }
+}
+
+/* Extra small (<=576px) */
+@media (max-width: 576px) {
+  .nba2k-logo {
+    height: 30px;
+  }
+
+  .games-section-header {
+    font-size: 32px;
+  }
+
+  .content-1-button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .social-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .footer-social-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
