@@ -6,11 +6,16 @@
 body {
   background: red;
   color: #FFFFFF;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Uniform', sans-serif;
   line-height: 1.6;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body.no-scroll {
+  overflow: hidden;
 }
 
 .navigation-bar {
@@ -18,59 +23,127 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-right: 50px;
-  padding-left: 50px;
+  padding-right: 80px;
+  padding-left: 80px;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
 .nba2k-logo {
-  height: 30px;
-  width: auto;
-  padding: 15px;
+  width: 80px;
+  height: auto;
+  padding: 20px;
+}
+
+.navigation-contents{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-button {
+  border: none;
+  background: #E30101;
+  color: #FFFFFF;
+  padding: 5px 10px;
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+
+  &:hover {
+    background: #FFFFFF;
+    color: #E30101;
+  }
+}
+
+.hamburger {
+  display: grid;
+  border: none;
+  background-color: transparent;
+  width: 18px;          
+  height: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 0;            
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #E30101;  
+  transition: all 0.3s ease-in-out;
+  
+}
+
+.hamburger span:nth-child(2){
+  height: 2px;
+}
+
+.hamburger.show span:nth-child(1) {
+  height: 2px;
+  transform: rotate(45deg) translate(4.5px,4.5px);
+}
+
+.hamburger.show span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.show span:nth-child(3) {
+  height: 2px;
+  transform: rotate(-45deg) translate(4.5px,-4.5px);
 }
 
 .nav-links {
-  list-style: none;
+  display: none;
+  position: fixed;
+  flex-direction: column;
+  gap: 50px;
+  background: #000000;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 350px;
+  height: 100vh;
+  padding: 20px;
+  text-align: center;
+  overflow-y: auto;  
+  overflow-x: hidden; 
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-links.show {
   display: flex;
-  gap: 40px;
+}
+
+.nav-links ul{
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 50px;
+  text-align: left;
+  gap: 20px;
 }
 
 .nav-links li a {
   text-decoration: none;
   color: #FFFFFF;
-  font-weight: 600;
-  font-size: 14px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
+  font-family: "Oswald", sans-serif;
+  font-size: 30px;
   position: relative;
   padding: 10px 0;
 }
 
 .nav-links li a:hover {
-  color: #E31837;
-}
-
-.nav-links li a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background: var(--nba-red);
-  transition: width 0.3s ease;
-}
-
-.nav-links li a:hover::after {
-  width: 100%;
+  color: #E30101;
 }
 
 .content-1 {
-  position: relative;
   height: 500px;
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -84,53 +157,47 @@ body {
 .video-background {
   object-fit: cover;
   object-position: center top;
-  filter: brightness(0.8);
   width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0px;
-  left: 0px;
+  height: auto;
+  display: block;
   z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .content-1-button{
   border: none;
-  background: #E31837;
+  background: #E30101;
   color: #FFFFFF;
-  padding: 16px 32px;
-  font-size: 18px;
-  font-weight: 700;
+  padding: 14px 30px;
+  font-family: "Oswald", sans-serif;
+  font-size: 25px;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  border-radius: 4px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
 
-.content-1-button:hover {
-  background-color: #FFFFFF;
-  color: #000000;
+  &:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+  }
 }
 
 .content-2 {
   background-image: url('/images/nba2k_blacktop.jpg');
   background-size: cover;
   background-position: center;
-  height: 210px;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-  gap: 30px;
   justify-content: center;
   align-items: center;
-  padding: 100px 5%;
+  padding: 70px;
+  gap: 20px;
 }
 
 .content-2-text{
-  font-size: 24px;
-  line-height: 1.7;
-  color: #B0B3B8;
+  display: block;
+  font-size: 22.5px;
 }
 
 .world-of-2k {
@@ -149,14 +216,12 @@ body {
 
 .content-3{
   background: #FFFFFF;
-  color:#0D1117;
-  height: auto;
   justify-content: center;
   align-items: center;
   text-align: center;
   display: flex;
   flex-direction: column;
-  padding: 30px 5%;
+  padding: 30px;
 
   a{
     text-decoration: none;
@@ -165,17 +230,18 @@ body {
 
 .games-section-header {
   font-family: 'Oswald', sans-serif;
-  font-size: 45px;
-  font-weight: 700;
+  color: #000000;
+  font-size: 46px;
   text-transform: uppercase;
   position: relative;
 }
 
 .games{
   display: flex;
-  flex-direction: row;
-  gap: 20px;
+  flex-wrap: wrap;
   padding: 32px;
+  gap: 30px;
+  justify-content: center; 
 }
 
 .game-cards{
@@ -185,8 +251,8 @@ body {
 }
 
 .game-card-image{
-  max-width: 450px;
-  height: auto;
+  width: 100%;
+  max-width: 416px;
   object-fit: cover;
   object-position: center;
 }
@@ -195,13 +261,13 @@ body {
   font-family: 'Oswald', sans-serif;
   font-size: 30px;
   font-weight: 600;  
-  color: #0D1117;
+  color: #000000;
 }
 
 .learn-button {
   background: transparent;
   border: none;
-  color: #E31837;
+  color: #E30101;
   font-size: 22px;
   font-weight: -100;
   text-transform: uppercase;
@@ -212,7 +278,7 @@ body {
 .socials{
   display: flex;
   flex-direction: column;
-  background: #0D1117;
+  background: #000000;
   gap: 32px;
   justify-content: center;
   align-items: center;
@@ -222,8 +288,7 @@ body {
 
 .socials-header{
   font-family: 'Oswald', sans-serif;
-  font-size: 38px;
-  font-weight: 1000;
+  font-size: 46px;
   text-transform: uppercase;
   position: relative;
 }
@@ -234,8 +299,8 @@ body {
 }
 
 .social-icon-container {  
-  background-color: #E31837;
-  border: 2px solid #E31837;
+  background-color: #E30101;
+  border: 2px solid #E30101;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -268,6 +333,10 @@ body {
   }
 }
 
+.content-4:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
 .content-box-text {
   width: 50%;
   display: flex;
@@ -278,31 +347,28 @@ body {
 
 .content-header {
   font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+  font-size: 40px;
   text-align: center;
-  font-size: 36px;
-  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  line-height: 1.2;
 }
 .content-description {
+  font-size: 20px;
+  font-weight: lighter;
   text-align: left;
-  font-size: 18px;
-  line-height: 1.6;
-  font-weight: 650;
 }
 .content-learn-button {
-  background-color: #0D1117;
+  background-color: #000000;
   color: #FFFFFF;
   border: none;
-  padding: 16px 32px;
-  font-size: 16px;
-  font-weight: 700;
+  border-radius: 10px;
+  padding: 10px 30px;
+  font-family: 'Oswald', sans-serif;
+  font-style: normal;
+  font-size: 32px;
+  font-weight: bold;
   text-transform: uppercase;
-  border-radius: 4px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  align-self: flex-start;
 }
 
 .content-learn-button:hover {
@@ -368,12 +434,12 @@ body {
 
 .content-5-button:hover {
   background: #FFFFFF;
-  color: #0D1117;
+  color: #000000;
 }
 
 .content-6 {
   background-color: #E32636;
-  color: #0D1117;
+  color: #000000;
   padding: 80px 5%;
   display: flex;
   flex-direction: row;
@@ -386,22 +452,22 @@ body {
 }
 
 .content-6-learn-button {
-  background-color: #0D1117;
+  background-color: #000000;
   color: #FFFFFF;
   border: none;
-  padding: 16px 32px;
-  font-size: 16px;
-  font-weight: 700;
+  border-radius: 10px;
+  padding: 10px 30px;
+  font-family: 'Oswald', sans-serif;
+  font-style: normal;
+  font-size: 32px;
+  font-weight: bold;
   text-transform: uppercase;
-  border-radius: 4px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  align-self: flex-start;
 }
 
 .content-6-learn-button:hover {
   background-color: #FFFFFF;
-  color: #0D1117;
+  color: #000000;
 }
 
 
@@ -412,11 +478,13 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 32px;
-  padding: 64px;
+  padding: 64px 80px;
 }
 
 .footer-socials{
+  width: 100%;
   display: flex;
+  flex-wrap: wrap;
   gap: 54px;
   justify-content: center;
   align-items: center;
@@ -445,213 +513,192 @@ body {
 }
 
 .footer-esrblogo-icon{
+  max-width: 200px;
   width: auto;
-  height: 74px;
+  height: auto;
 }
 
 .footer-links{
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   text-align: center;
   align-items: center;
   gap: 30px;
+  padding: 0 300px;
 }
 
 .footer-links a {
   text-decoration: none;
   color: #FFFFFF;
   text-decoration: none;
-  font-size: 18px;
-  font-weight: 600;
+  font-family: "Oswald", sans-serif;
+  font-size: 30px;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
 }
 
 .footer-links a:hover {
-  color: #E31837;
+  color: #E30101;
 }
 
 .footer-copyright {
   color: #FFFFFF;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.2;
-  max-width: 1300px;
+  font-size: 20px;
   text-align: left;
+  line-height: normal;
 }
 
-.hamburger {
-  display: none;
-  font-size: 28px;
-  color: #fff;
-  cursor: pointer;
-}
-
-/* Responsive Styles */
-
-
-@media (max-width: 992px) {
-
+/* Tablets (<= 1024px) */
+@media (max-width: 1024px) {
   .navigation-bar {
-    gap: 200px;
-    padding: 0 20px;
-  }
-
-  .content-2-text {
-    font-size: 20px;
-  }
-
-  .games {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .game-cards {
-    width: 100%;
-  }
-
-  .social-box {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .content-4, .content-6 {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .content-box-text, .content-box-image {
-    width: 100%;
-  }
-
-  .content-header {
-    font-size: 28px;
-  }
-}
-
-@media (max-width: 768px) {
-  .navigation-bar {
-    justify-content: space-between;
-    padding: 10px 20px;
-  }
-
-  .hamburger {
-    display: block; 
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    gap: 20px;
-    background: #000;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 100%;
-    padding: 20px;
-    text-align: center;
-  }
-
-  .nav-links.show {
-    display: flex; /* show when toggled */
-  }
-
-  .nav-links li a {
-    font-size: 18px;
-    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   .content-1 {
     height: 400px;
-    padding: 40px 20px;
-  }
-
-  .content-1-button {
-    font-size: 16px;
-    padding: 12px 24px;
-  }
-
-  .content-2-text {
-    font-size: 16px;
+    padding: 32px;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .world-of-2k-iframe {
-    height: 250px;
+    height: 500px;
+  }
+
+  .content-4, 
+  .content-6 {
+    flex-direction: column;
+    text-align: center;
+  }
+  .content-box-text, 
+  .content-box-image {
+    width: 100%;
+  }
+}
+
+/* Mobile (<= 768px) */
+@media (max-width: 768px) {
+  .navigation-bar {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .nav-links li a{
+    font-size: 24px;
+  }
+
+  .content-1 {
+    height: 300px;
+  }
+
+  .content-1-button{
+    font-size: 20px;
+    padding: 10px 20px;
+  }
+
+  .content-2{
+    padding: 56px 16px;
+  }
+
+  .content-2-text {
+    font-size: 18px;
+    padding: 18px 0;
   }
 
   .games {
     flex-direction: column;
     align-items: center;
   }
-  .game-cards {
-    width: 100%;
+
+  .world-of-2k-iframe {
+  width: 100%;
+  height: auto;
+  border: none;
+  border-radius: 8px;
+  margin: 0 auto;
+  display: block;
+}
+
+  .game-card-image {
+    max-width: 100%;
   }
 
   .social-box {
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
   }
 
-  .social-icon-container {
-    width: 80px;
-    height: 60px;
+  .content-4 , .content-6{
+    display: flex;
+    justify-content: center; 
+    align-items: center;      
+    gap: 40px;                
+    text-align: center;     
+    padding: 40px;
+  }  
+
+  .content-4:nth-child(even) {
+  flex-direction: column;
+  }
+  
+  .content-box-text {
+    width: 100%;
+    padding: 16px;
   }
 
   .content-header {
-    font-size: 24px;
+    font-size: 32px;
   }
 
   .content-description {
     font-size: 16px;
+  }
+
+  .content-learn-button, .content-6-learn-button{
+    font-size: 25px;
+  }
+
+  .content-box-image img {
+    max-width: 100%;
+  }
+
+  .footer {
+    padding: 40px 20px;
+  }
+  .footer-links {
+    padding: 0;
+    gap: 16px;
+    flex-direction: column;
+  }
+  .footer-links a {
+    font-size: 22px;
+  }
+  .footer-copyright {
+    font-size: 14px;
     text-align: center;
+  }
+}
+
+/* Very small devices (<= 480px) */
+@media (max-width: 480px) {
+  .games-section-header {
+    font-size: 28px;
+  }
+
+  .game-title {
+    font-size: 22px;
+  }
+
+  .nav-links {
+    width: 100%;
   }
 
   .content-5-header {
     font-size: 26px;
   }
 
-  .footer{
-    padding-right: 2px;
-    padding-left: 2px;
-  }
-
-  .footer-links {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .footer-socials {
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-
-  .footer-copyright {
-    padding: 16px;
-  }
-}
-
-/* Extra small (<=576px) */
-@media (max-width: 576px) {
-  .nba2k-logo {
-    height: 30px;
-  }
-
-  .games-section-header {
-    font-size: 32px;
-  }
-
-  .content-1-button {
-    font-size: 14px;
-    padding: 10px 20px;
-  }
-
-  .social-icon {
-    width: 40px;
-    height: 40px;
-  }
-
-  .footer-social-icon {
-    width: 40px;
-    height: 40px;
+  .footer-links a {
+    font-size: 18px;
   }
 }
