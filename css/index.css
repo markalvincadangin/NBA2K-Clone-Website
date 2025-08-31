@@ -4,7 +4,7 @@
 }
 
 body {
-  background: red;
+  background: transparent;
   color: #FFFFFF;
   font-family: 'Uniform', sans-serif;
   line-height: 1.6;
@@ -183,7 +183,7 @@ body.no-scroll {
 }
 
 .content-2 {
-  background-image: url('/images/nba2k_blacktop.jpg');
+  background-image: url('https://nba.2k.com/assets/nba2k_aa_blacktop_d.KzHyaPnx.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
