@@ -1,0 +1,92 @@
+.footer{
+  background-color: $color-footer-bg;
+  text-align: center;
+  @include flex(column, center, center);
+  gap: $spacing-xxl;
+  padding: $spacing-xxxl $spacing-xl;
+}
+
+.footer-socials{
+  width: 100%;
+  @include flex(row, center, center);
+  flex-wrap: wrap;
+  gap: 54px;
+}
+
+.footer-social-icon {
+  width: 54px;
+  height: 54px;
+}
+
+.footer-nba2klogo {
+  @include flex(row, center, center);
+  gap: $spacing-xxl;
+}
+
+.footer-2klogo-icon {
+  width: 74px;
+  height: auto;
+}
+
+.footer-nbalogo-icon{
+  width: 74px;
+  height: auto;
+}
+
+.footer-esrblogo-icon{
+  max-width: 200px;
+  width: auto;
+  height: auto;
+}
+
+.footer-links{
+  @include flex(row, center, center);
+  flex-wrap: wrap;
+  text-align: center;
+  gap: $spacing-xl;
+  padding: 0 300px;
+
+  a {
+    text-decoration: none;
+    color: $color-footer-text;
+    font-family: $font-family-primary;
+    font-size: $spacing-xl;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $color-tertiary;
+    }
+  }
+}
+
+.footer-copyright {
+  color: $color-footer-text;
+  font-size: $font-sizes-xs;
+  text-align: left;
+  line-height: normal;
+}
+
+// Media queries for responsive design
+@media (max-width: 768px) {
+  .footer {
+    padding: $spacing-xxl $spacing-m;
+  }
+  
+  .footer-links {
+    padding: 0 $spacing-xl;
+    
+    a {
+      font-size: $font-sizes-xs;
+    }
+  }
+  
+  .footer-copyright {
+    font-size: calc(#{$font-sizes-xs} - 2px);
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-links a {
+    font-size: calc(#{$font-sizes-xs} - 4px);
+  }
+}

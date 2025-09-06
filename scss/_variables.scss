@@ -1,36 +1,65 @@
 // Colors
 $color-bg-dark: #000000;
 $color-bg-light: #FFFFFF;
-$color-primary: #E31837;
+$color-primary: #FFFFFF;
 $color-secondary: #000000;
+$color-tertiary: #E31837;
 $color-accent: #B0B3B8;
 $color-link: #FFFFFF;
 $color-link-hover: #E31837;
 $color-footer-bg: #000000;
 $color-footer-text: #FFFFFF;
+$color-platform-bg: #666666;
 
 // Spacing
-$space-xs: 8px;
-$space-sm: 16px;
-$space-md: 32px;
-$space-lg: 64px;
-$space-xl: 100px;
-
-// Border Radius
-$radius-sm: 4px;
-$radius-md: 8px;
+$spacing-xs: .25rem;
+$spacing-xs-em: .25em;
+$spacing-s: .5rem;
+$spacing-m: 1rem;
+$spacing-l: 1.5rem;
+$spacing-xl: 2rem;
+$spacing-xxl: 3.5rem;
+$spacing-xxxl: 5rem;
+$spacing: 1rem;
 
 // Fonts
-$font-family-base: 'Roboto', sans-serif;
-$font-family-heading: 'Oswald', sans-serif;
-$font-size-base: 16px;
-$font-size-heading: 36px;
-$font-size-nav: 14px;
-$font-size-button: 18px;
+$font-family-primary: 'SharpGrotesk', sans-serif;
+$font-family-secondary: 'RecklessNeue', serif;
+$font-family-tertiary: 'Barlow', sans-serif;
+$font-sizes-5xl: 110px;
+$font-sizes-4xl: 72px;
+$font-sizes-3xl: 54px;
+$font-sizes-xxl: 48px;
+$font-sizes-xl: 42px;
+$font-sizes-l: 40px;
+$font-sizes-m: 34px;
+$font-sizes-s: 26px;
+$font-sizes-xs: 18px;
+
+// Line Heights
+$line-heights-4xl: 72px;
+$line-heights-3xl: 54px;
+$line-heights-xxl: 48px;
+$line-heights-xl: 42px;
+$line-heights-l: 48px;
+$line-heights-m: 42px;
+$line-heights-s: 18px;
+
+// Buttons
+$button_font-weight: normal;
+$button_font-size: 34px;
+$button_line-height: 40px;
+$button_padding: 14px 56px;
+$button_font-style: normal;
+$button_text-transform: uppercase;
+$button_border-radius: 70px;
 
 // Transition
-$transition-fast: 0.3s ease;
-$transition-slow: 0.5s ease;
+$transition-fast: 0.3s ease-in-out;
+$transition-slow: 0.5s ease-in-out;
 
 // Shadows
 $shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+
+// Container Sizes
+$container-max-width: 1200px;
