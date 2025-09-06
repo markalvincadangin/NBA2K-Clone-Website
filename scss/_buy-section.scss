@@ -1,0 +1,446 @@
+// Main Buy Container
+.buy-main-container {
+    @include flex(row, center, center);
+    background: $color-bg-dark;
+    padding: $spacing-l $spacing-xxl;
+
+}
+
+// Edition Selection Tabs
+.edition-selection {
+    align-self: start;
+    background: $color-bg-dark;
+    @include flex(column, center, center);
+}
+
+.edition-tabs {
+    @include flex(column, center, center);
+}
+
+.edition-tab {    
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: $color-primary;
+    padding: $spacing-s $spacing-l;
+    font-family: $font-family-primary;
+    font-size: $font-sizes-xl;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all $transition-fast;
+
+    &:hover,
+    &.active {
+        color: $color-tertiary;
+    }
+}
+
+
+
+// Edition Cards
+.edition-cards-container {
+    padding: $spacing-l $spacing-xxl;
+}
+
+.edition-card-detail {
+    display: none;
+
+    &.active {
+        display: block;
+            max-width: 600px;
+
+    }
+}
+
+.edition-card-layout {
+    @include flex(row, center, center);
+    gap: $spacing-xxxl;
+}
+
+.edition-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+// Purchase Section
+.purchase-section {
+    @include flex(column, center, center);
+    padding: $spacing-l $spacing-xl;
+    gap: $spacing-xl;
+}
+
+.section-title {
+    font-family: $font-family-primary;
+    font-size: $font-sizes-xl;
+    font-weight: bold;
+    color: $color-primary;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.region-selection {
+    margin-bottom: $spacing-xl;
+}
+
+.region-dropdown {
+    @include flex(row, center, center);
+}
+
+.region-select {
+    background: $color-bg-dark;
+    border: 2px solid $color-tertiary;
+    color: $color-primary;
+    padding: $spacing-s $spacing-l;
+    font-family: $font-family-primary;
+    font-size: $font-sizes-xs;
+    border-radius: 4px;
+    min-width: 200px;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+// Platform Selection
+.platform-selection {
+    margin-bottom: $spacing-xl;
+}
+
+.platform-buttons {
+    @include flex(row, center, center);
+    gap: $spacing-l;
+    flex-wrap: wrap;
+}
+
+.platform-btn {
+    background: $color-platform-bg;
+    border: 2px solid transparent;
+    padding: $spacing-l;
+    width: 80px;
+    height: 80px;
+    @include flex(row, center, center);
+    cursor: pointer;
+    transition: all $transition-fast;
+    border-radius: 8px;
+
+    &:hover,
+    &.active {
+        border-color: $color-tertiary;
+    }
+
+    img {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+// Buy Button
+.buy-button-container {
+    @include flex(column, center, center);
+}
+
+.primary-buy-button {
+    @include button-style($color-tertiary, $color-primary, $color-primary, $color-tertiary);
+    font-family: $font-family-primary;
+    font-weight: bold;
+    padding: 10px 40px;
+    text-transform: uppercase;
+}
+
+// Bonus Content
+.bonus-content {
+    text-align: center;
+}
+
+.bonus-section {
+    max-width: 600px;
+}
+
+.bonus-title {
+    font-family: $font-family-primary;
+    font-size: $font-sizes-xl;
+    font-weight: bold;
+    color: $color-primary;
+}
+
+.bonus-list {
+    text-align: left;
+
+    li {
+        font-family: $font-family-primary;
+        font-size: $font-sizes-xs;
+        color: $color-primary;
+        position: relative;
+    }
+}
+
+// Inclusion Showcase
+.inclusion-showcase {
+    background: $color-bg-dark;
+    padding: $spacing-s 0;
+}
+
+.inclusion-container {
+    @include flex(column);
+}
+
+.inclusion-item {
+    width: 100%;
+    @include flex(row, center, center);
+    text-align: center;
+    padding:  0  0 $spacing-xxl;
+    border-radius: 8px;
+    gap: $spacing-xl;
+}
+
+.inclusion-image {
+    img {
+        max-width: 180px;
+        height: auto;
+    }
+}
+
+.inclusion-content {
+    width: 100%;
+}
+
+.inclusion-title {
+    font-family: $font-family-primary;
+    font-size: $font-sizes-m;
+    font-weight: bold;
+    color: $color-primary;
+    text-transform: uppercase;
+}
+
+.inclusion-features {
+
+    li {
+        font-family: $font-family-primary;
+        font-size: $font-sizes-xs;
+        color: $color-primary;
+        position: relative;
+        text-align: justify;
+
+        &::before {
+            content: "•";
+            color: $color-tertiary;
+            position: absolute;
+            left: 0;
+        }
+    }
+}
+
+// Legal Disclaimer
+.legal-disclaimer {
+    background: $color-bg-dark;
+    padding: $spacing-xxl 0;
+}
+
+.disclaimer-container {
+    padding: 0 $spacing-xl;
+    @include flex(column, start, left);
+    gap: $spacing-l;
+}
+
+.disclaimer-text {
+    font-family: $font-family-tertiary;
+    font-size: 16px;
+    color: $color-accent;
+    
+
+    a {
+        color: $color-tertiary;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+// Choose Your Edition
+.choose-edition-section {
+    @include flex(column, center, center);
+    background: transparent;
+    padding: $spacing-xxxl 0;
+    text-align: center;
+}
+
+.choose-edition-title {
+    font-family: $font-family-secondary;
+    font-size: $font-sizes-xl;
+    color: $color-tertiary;
+}
+
+.choose-edition-container {
+    padding: $spacing-xl;
+    @include flex(row, center, start);
+    gap: $spacing-xxl;
+}
+
+.choose-edition-cards{
+    @include flex(column, center, center);
+    gap: $spacing-xl;
+    padding: $spacing-l;
+}
+
+.edition-image-container { 
+    width: 250px;
+    height: auto;
+}
+
+.edition-cover-image {
+    width: 100%;
+    height: auto;
+    border: 4px solid $color-tertiary;
+    object-fit: cover;
+}
+
+.edition-buy-button {
+    background: transparent;
+    color: $color-primary;
+    border: 1px solid $color-tertiary;
+    border-radius: $button_border_radius;
+    font-family: $font-family-primary;
+    font-size: $font-sizes-m;
+    padding: 14px 56px;
+    text-transform: uppercase;
+}
+
+.edition-title {
+    font-family: $font-family-primary;
+    font-size: $font-sizes-xxl;
+    font-weight: bold;
+    color: $color-primary;
+    text-transform: uppercase;
+}
+
+.edition-description {
+    font-family: $font-family-primary;
+    font-size: $font-sizes-xs;
+    color: $color-primary;
+}
+
+// Edition Features
+.edition-features {
+    margin-bottom: $spacing-xxl;
+}
+
+.feature-list {
+    list-style: none;
+}
+
+.feature-item {
+    font-family: $font-family-primary;
+    font-size: $font-sizes-xs;
+    color: $color-primary;
+    padding-left: 0;
+    text-align: left;
+}
+
+
+// FAQ Section
+.faq-section {
+    background: $color-bg-light;
+    padding: $spacing-xxxl;
+    text-align: center;
+}
+
+.faq-container {
+    @include flex(column, center, center);
+    gap: $spacing-xl;
+}
+
+.faq-title {
+    font-family: $font-family-primary;
+    font-size: $font-sizes-xxl;
+    font-weight: bold;
+    color: $color-bg-dark;
+    text-transform: uppercase;
+}
+
+.faq-button {
+    @include button-style($color-bg-dark, $color-primary, $color-tertiary, $color-primary);
+    font-size: $font-sizes-xl;
+    font-weight: bold;
+    padding: $spacing-m;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+
+// Responsive Design
+@media (max-width: 1024px) {
+    .edition-card-layout {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .edition-image-container {
+        width: 300px;
+    }
+
+    .inclusion-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: $spacing-xl;
+    }
+}
+
+@media (max-width: 768px) {
+    .edition-tabs {
+        flex-direction: column;
+        gap: $spacing-s;
+    }
+
+    .edition-tab {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .platform-buttons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .platform-btn {
+        width: 60px;
+        height: 60px;
+
+        img {
+            width: 32px;
+            height: 32px;
+        }
+    }
+
+    .edition-title {
+        font-size: $font-sizes-l;
+    }
+
+    .inclusion-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .faq-title {
+        font-size: $font-sizes-l;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .buy-main-container,
+    .faq-section,
+    .legal-disclaimer {
+        padding: $spacing-xl 0;
+    }
+
+    .edition-card-layout {
+        padding: 0 $spacing-l;
+    }
+
+    .primary-buy-button {
+        width: 100%;
+        max-width: 300px;
+    }
+}

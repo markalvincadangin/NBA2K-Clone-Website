@@ -1,29 +1,29 @@
-@mixin flex-center {
+@mixin flex($direction: row, $justify: center, $align: center) {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
 }
 
-@mixin flex-column {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+@mixin button-style(
+  $bg: $color-bg-dark,
+  $color: $color-primary,
+  $hover-bg: $color-link,
+  $hover-color: $color-link-hover,
+) {
+  font-size: $button_font-size;
+  text-transform: $button_text-transform;
+  font-weight: $button_font-weight;
+  font-style: $button_font-style;
+  line-height: $button_line-height;
+  box-shadow: $shadow-md;
+  background: $bg;
+  color: $color;
+  cursor: pointer;
+  transition: 0.3s ease;
 
-@mixin flex-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-@mixin flex-space-between{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-@mixin text-center {
-  text-align: center;
+  &:hover {
+    background: $hover-bg;
+    color: $hover-color;
+  }
 }

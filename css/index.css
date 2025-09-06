@@ -82,7 +82,6 @@ body.no-scroll {
 }
 
 .hamburger {
-  display: grid;
   border: none;
   background-color: transparent;
   width: 18px;          
