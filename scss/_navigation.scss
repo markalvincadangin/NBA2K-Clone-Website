@@ -1,38 +1,112 @@
-.navigation-bar{
-    @include flex-space-between;
-    background: $color-bg-dark;
-    padding-right: 50px;
-    padding-left: 50px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+.navigation-bar {
+  background: $color-bg-dark;
+  @include flex;
+  justify-content: space-between;
+  padding: $spacing-s $spacing-xxl;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .nba2k-logo {
+  width: 180px;
   height: 30px;
-  width: auto;
-  padding: 15px;
+}
+
+.navigation-contents{
+  @include flex;
+  gap: $spacing-s;
+}
+
+.nav-button {
+  background-color: $color-tertiary;
+  color:  $color-primary;
+  padding: 5px 20px;
+  font-family: $font-family-primary;
+  font-size: 34px;
+  &:hover {
+    background: $color-link;
+    color: $color-link-hover;
+  }
+}
+
+.hamburger {
+  border: none;
+  background-color: transparent;
+  width: 18px;          
+  height: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 0;  
+  
+  span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: $color-tertiary;
+    transition: all $transition-fast;  
+  }
+}
+
+.hamburger span:nth-child(2){
+  height: 2px;
+}
+
+.hamburger.show span:nth-child(1) {
+  height: 2px;
+  transform: rotate(45deg) translate(4.5px,4.5px);
+}
+
+.hamburger.show span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.show span:nth-child(3) {
+  height: 2px;
+  transform: rotate(-45deg) translate(4.5px,-4.5px);
 }
 
 .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 40px;
-
-  li a {
-  text-decoration: none;
-  color: #FFFFFF;
-  font-weight: 600;
-  font-size: 14px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
-  position: relative;
-  padding: 10px 0;    
-  
-  &:hover {
-        color: $color-primary;
-    }
+  display: none;
+  position: fixed;
+  flex-direction: column;
+  gap: $spacing-xxl;
+  background: #000000;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 350px;
+  height: 100vh;
+  padding: $spacing-m;
+  text-align: center;
+  overflow-y: auto;  
+  overflow-x: hidden; 
+  transition: transform 0.3s ease-in-out;
 }
 
+.nav-links.show {
+  display: flex;
+}
+
+.nav-links ul{
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: $spacing-xxl;
+  text-align: left;
+  gap: $spacing-m;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: $color-primary;
+  font-size: 30px;
+  position: relative;
+  padding: 10px 0;
+}
+
+.nav-links li a:hover {
+  color: $color-tertiary;
 }
