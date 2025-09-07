@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NBA 2K26 | Buy Now</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script src="js/script.js"></script>
-    <link rel="icon" type="image/x-icon"
-        href="https://assets.2k.com/1a6ngf98576c/7HH6BgcsiJxNXZtS9DbU5e/62a8aa86e95a09fb06f712c5c8579f39/NBA2K-logoman02-48x48.svg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+    <link rel="icon" media="(prefers-color-scheme: light)" href="//assets.2k.com/1a6ngf98576c/4CGD33F7Jfyj7sPKEZ76CV/d6e5582987c520e4e96d52d8ca19f4ec/NBA26_AppConfig_Logos_NBA26_Light-Favicon_48x48.svg">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="//assets.2k.com/1a6ngf98576c/2XRGuzoKtoErgAtpr2tLvN/92a905728c802c223d9ba2b7febd863b/NBA26_AppConfig_Logos_NBA26_Dark-Favicon_48x48.svg">
 </head>
 
 <body>
@@ -454,10 +456,11 @@
                 <!-- End of Standard Edition -->
 
 
-                <!-- Standard Edition -->
+                <!-- WNBA Edition -->
                 <div class="edition-card-detail" id="wnba">
                     <div class="edition-card-layout">
                         <div class="purchase-section">
+
                             <div class="region-selection">
                                 <h3 class="section-title">Select Your Region</h3>
                                 <div class="region-dropdown">
@@ -528,7 +531,7 @@
                     </section>
 
                 </div>
-                <!-- End of Standard Edition -->                
+                <!-- End of WNBA Edition -->                
 
         </main>
 
@@ -537,85 +540,95 @@
         <div class="choose-edition-section">
             <h2 class="choose-edition-title">Choose Your Edition</h2>
 
-            <div class="choose-edition-container">
+            <!-- <div class="choose-edition-container"> -->
 
-                <div class="choose-edition-cards">
-                    <div class="edition-image-container">
-                        <img src="https://assets.2k.com/1a6ngf98576c/5H1RQ6SRtQoH0qqKFOxRGt/f53880254cbd923733b3911a21b358dd/NBA26_Leave-No-Doubt_FOB_425x535.png"
-                            alt="Leave No Doubt Edition" class="edition-cover-image">
+
+                <div class="swiper choose-edition-slider">
+                    <div class="swiper-wrapper">
+                
+                        <div class="swiper-slide choose-edition-cards">
+                            <div class="edition-image-container">
+                                <img src="https://assets.2k.com/1a6ngf98576c/5H1RQ6SRtQoH0qqKFOxRGt/f53880254cbd923733b3911a21b358dd/NBA26_Leave-No-Doubt_FOB_425x535.png"
+                                    height="535" width="425" alt="Leave No Doubt Edition" class="edition-cover-image">
+                            </div>
+                
+                            <h2 class="edition-title">LEAVE NO DOUBT EDITION</h2>
+                            <button class="edition-buy-button">BUY NOW</button>
+                
+                            <p class="edition-description">Your talent is undisputed; dominate every game mode with NBA 2K26 Leave No
+                                Doubt Edition.</p>
+                
+                            <div class="edition-features">
+                                <ul class="feature-list">
+                                    <li class="feature-item">✅ 135,000 VC</li>
+                                    <li class="feature-item">✅ Season Pass</li>
+                                    <li class="feature-item">✅ MyCAREER Content + Puffer Jacket</li>
+                                    <li class="feature-item">✅ MyTEAM Content</li>
+                                    <li class="feature-item">✅ Leave No Doubt Promo Pack</li>
+                                </ul>
+                            </div>
+                        </div>
+                
+                
+                
+                        <div class="swiper-slide choose-edition-cards">
+                            <div class="edition-image-container">
+                                <img src="https://assets.2k.com/1a6ngf98576c/3tOvp3jUZGhprJUWHI5nKD/ddb1305fa8362c73fc7f0df0dbb0f911/NBA26_Superstar_FOB_425x535.png"
+                                    height="535" width="425" alt="NBA 2K26 Superstar Edition" class="edition-cover-image">
+                            </div>
+                
+                            <h2 class="edition-title">SUPERSTAR EDITION</h2>
+                            <button class="edition-buy-button">BUY NOW</button>
+                
+                            <p class="edition-description">Transcend the sport as an icon with NBA 2K26 Superstar Edition.</p>
+                
+                            <div class="edition-features">
+                                <ul class="feature-list">
+                                    <li class="feature-item">✅ 100,000 VC</li>
+                                    <li class="feature-item">✅ MyCAREER Content</li>
+                                    <li class="feature-item">✅ MyTEAM Content</li>
+                                </ul>
+                            </div>
+                        </div>
+                
+                        <div class="swiper-slide choose-edition-cards">
+                            <div class="edition-image-container">
+                                <img src="https://assets.2k.com/1a6ngf98576c/2QH1PlkhFZ9SQnAhJeAcCr/8c30228f14eceaf5566109d0406d59d8/NBA26_Standard_FOB_425x535.png"
+                                    height="535" width="425" alt="NBA 2K26 Standard Edition" class="edition-cover-image">
+                            </div>
+                
+                            <h2 class="edition-title">STANDARD EDITION</h2>
+                            <button class="edition-buy-button">BUY NOW</button>
+                
+                            <p class="edition-description">Team up with friends and compete for glory with NBA 2K26 Standard Edition.
+                            </p>
+                        </div>
+                
+                        <div class="swiper-slide choose-edition-cards">
+                            <div class="edition-image-container">
+                                <img src="https://assets.2k.com/1a6ngf98576c/56KONIOEoYzBDrpmrbCtGj/bdc6d6b1c655d36571ce946cd8a329aa/NBA26_WNBA_FOB_425x535.png"
+                                    height="535" width="425" alt="WNBA Edition" class="edition-cover-image">
+                            </div>
+                
+                            <h2 class="edition-title">WNBA EDITION</h2>
+                            <button class="edition-buy-button">BUY NOW</button>
+                
+                            <p class="edition-description">Empower your teammates with sensational play and chase the W with NBA 2K26
+                                WNBA Edition.</p>
+                        </div>
+                
                     </div>
-
-                    <h2 class="edition-title">LEAVE NO DOUBT EDITION</h2>
-                    <button class="edition-buy-button">BUY NOW</button>
-
-                    <p class="edition-description">Your talent is undisputed; dominate every game mode with NBA 2K26 Leave No Doubt Edition.</p>
-
-                    <div class="edition-features">
-                        <ul class="feature-list">
-                            <li class="feature-item">✅ 135,000 VC</li>
-                            <li class="feature-item">✅ Season Pass</li>
-                            <li class="feature-item">✅ MyCAREER Content + Puffer Jacket</li>
-                            <li class="feature-item">✅ MyTEAM Content</li>
-                            <li class="feature-item">✅ Leave No Doubt Promo Pack</li>
-                        </ul>
+                
+                    <div class="swiper-controls">
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"></div>
                     </div>
+                
                 </div>
+                
+                <!--choose-edition-container  -->
 
-                <div class="choose-edition-cards">
-                    <div class="edition-image-container">
-                        <img src="https://assets.2k.com/1a6ngf98576c/3tOvp3jUZGhprJUWHI5nKD/ddb1305fa8362c73fc7f0df0dbb0f911/NBA26_Superstar_FOB_425x535.png"
-                            alt="NBA 2K26 Superstar Edition" class="edition-cover-image">
-                    </div>
-
-                    <h2 class="edition-title">SUPERSTAR EDITION</h2>
-                    <button class="edition-buy-button">BUY NOW</button>
-
-                    <p class="edition-description">Transcend the sport as an icon with NBA 2K26 Superstar Edition.</p>
-
-                    <div class="edition-features">
-                        <ul class="feature-list">
-                            <li class="feature-item">✅ 100,000 VC</li>
-                            <li class="feature-item">✅ MyCAREER Content</li>
-                            <li class="feature-item">✅ MyTEAM Content</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="choose-edition-cards">
-                    <div class="edition-image-container">
-                        <img src="https://assets.2k.com/1a6ngf98576c/2QH1PlkhFZ9SQnAhJeAcCr/8c30228f14eceaf5566109d0406d59d8/NBA26_Standard_FOB_425x535.png"
-                            alt="NBA 2K26 Standard Edition" class="edition-cover-image">
-                    </div>
-
-                    <h2 class="edition-title">STANDARD EDITION</h2>
-                    <button class="edition-buy-button">BUY NOW</button>
-
-                    <p class="edition-description">Team up with friends and compete for glory with NBA 2K26 Standard Edition.</p>
-                </div>
-
-                <div class="choose-edition-cards">
-                    <div class="edition-image-container">
-                        <img src="https://assets.2k.com/1a6ngf98576c/56KONIOEoYzBDrpmrbCtGj/bdc6d6b1c655d36571ce946cd8a329aa/NBA26_WNBA_FOB_425x535.png"
-                            alt="WNBA Edition" class="edition-cover-image">
-                    </div>
-
-                    <h2 class="edition-title">WNBA EDITION</h2>
-                    <button class="edition-buy-button">BUY NOW</button>
-
-                    <p class="edition-description">Transcend the sport as an icon with NBA 2K26 Superstar Edition.</p>
-
-                    <div class="edition-features">
-                        <ul class="feature-list">
-                            <li class="feature-item">✅ 10,000 VC Pre-Order Bonus</li>
-                            <li class="feature-item">✅ 100,000 VC</li>
-                            <li class="feature-item">✅ Early Access</li>
-                            <li class="feature-item">✅ MyCAREER Content</li>
-                            <li class="feature-item">✅ MyTEAM Content</li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
         </div>
         <!-- End of Choose Your Edition -->
 
@@ -633,44 +646,44 @@
             <div class="footer-socials">
 
                 <a href="https://www.instagram.com/NBA2K">
-                    <img src="images/Instagram_Logo.svg" alt="Instagram" class="footer-social-icon">
+                    <img src="/images/Instagram_Logo.svg" alt="Instagram" class="footer-social-icon">
                 </a>
 
                 <a href="https://www.facebook.com/NBA2K">
-                    <img src="images/Facebook_Logo.svg" alt="Facebook" class="footer-social-icon">
+                    <img src="/images/Facebook_Logo.svg" alt="Facebook" class="footer-social-icon">
                 </a>
 
                 <a href="https://twitter.com/intent/user?screen_name=NBA2K">
-                    <img src="images/twitter-white__2_.svg" alt="X" class="footer-social-icon">
+                    <img src="/images/twitter-white__2_.svg" alt="X" class="footer-social-icon">
                 </a>
 
 
                 <a href="https://www.youtube.com/NBA2K">
-                    <img src="images/YouTube_Logo.svg" alt="YouTube" class="footer-social-icon">
+                    <img src="/images/YouTube_Logo.svg" alt="YouTube" class="footer-social-icon">
                 </a>
 
                 <a href="https://www.twitch.tv/NBA2K">
-                    <img src="images/twitchicon.svg" alt="Twitch" class="footer-social-icon">
+                    <img src="/images/twitchicon.svg" alt="Twitch" class="footer-social-icon">
                 </a>
 
                 <a href="https://discord.com/NBA2K">
-                    <img src="images/Discord_78x78.svg" alt="Discord" class="footer-social-icon">
+                    <img src="/images/Discord_78x78.svg" alt="Discord" class="footer-social-icon">
                 </a>
 
             </div>
 
             <div class="footer-nba2klogo">
                 <a href="https://2k.com/en-US/">
-                    <img src="images/2K_Logo.avif" alt="2K.com" class="footer-2klogo-icon">
+                    <img src="/images/2K_Logo.avif" alt="2K.com" class="footer-2klogo-icon">
                 </a>
                 <a href="https://www.nba.com/">
-                    <img src="images/NBA_logo-min.avif" alt="NBA Logo" class="footer-nbalogo-icon">
+                    <img src="/images/NBA_logo-min.avif" alt="NBA Logo" class="footer-nbalogo-icon">
                 </a>
             </div>
 
             <div class="footer-esrblogo">
                 <a href="https://www.esrb.org/">
-                    <img src="images/ESRB_for_web__2___1___1_.avif" alt="ESRB Logo" class="footer-esrblogo-icon">
+                    <img src="/images/ESRB_for_web__2___1___1_.avif" alt="ESRB Logo" class="footer-esrblogo-icon">
                 </a>
             </div>
 

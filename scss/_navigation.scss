@@ -50,6 +50,10 @@
   }
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 .hamburger span:nth-child(2){
   height: 2px;
 }
@@ -109,4 +113,47 @@
 
 .nav-links li a:hover {
   color: $color-tertiary;
+}
+
+@media (max-width: 768px) {
+  .navigation-bar {
+    padding: $spacing-s $spacing-m;
+  }
+
+  .nba2k-logo {
+    width: 150px;
+    height: 25px;
+  }
+
+  .nav-button {
+    font-size: $font-sizes-m;
+  }
+
+  .nav-links {
+    width: 100%;
+    right: 0;
+    top: 50px;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .nav-button {
+    font-size: $font-sizes-xs;
+  }
+
+  .navigation-bar {
+    padding: $spacing-s $spacing-m;
+  }
+
+  .nba2k-logo {
+    width: 150px;
+    height: 25px;
+  }
+
+  .nav-links {
+    width: 100%;
+    right: 0;
+    top: 50px;
+  }
 }
