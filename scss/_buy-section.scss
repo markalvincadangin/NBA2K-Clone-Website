@@ -3,7 +3,8 @@
     @include flex(row, center, center);
     background: $color-bg-dark;
     padding: $spacing-l $spacing-xxl;
-
+    flex-wrap: wrap;
+    margin: 0;
 }
 
 // Edition Selection Tabs
@@ -17,7 +18,7 @@
     @include flex(column, center, center);
 }
 
-.edition-tab {    
+.edition-tab {
     width: 100%;
     background: transparent;
     border: none;
@@ -40,7 +41,7 @@
 
 // Edition Cards
 .edition-cards-container {
-    padding: $spacing-l $spacing-xxl;
+    padding: $spacing-l;
 }
 
 .edition-card-detail {
@@ -48,8 +49,7 @@
 
     &.active {
         display: block;
-            max-width: 600px;
-
+        max-width: 600px;
     }
 }
 
@@ -189,7 +189,7 @@
     width: 100%;
     @include flex(row, center, center);
     text-align: center;
-    padding:  0  0 $spacing-xxl;
+    padding: 0 0 $spacing-xxl;
     border-radius: 8px;
     gap: $spacing-xl;
 }
@@ -247,7 +247,7 @@
     font-family: $font-family-tertiary;
     font-size: 16px;
     color: $color-accent;
-    
+
 
     a {
         color: $color-tertiary;
@@ -273,20 +273,73 @@
     color: $color-tertiary;
 }
 
-.choose-edition-container {
-    padding: $spacing-xl;
-    @include flex(row, center, start);
-    gap: $spacing-xxl;
+.swiper {
+    width: 100%;
+    overflow: hidden;
 }
 
-.choose-edition-cards{
+.swiper-wrapper {
+    display: flex;
+    transition-timing-function: ease-in-out;
+}
+
+.swiper-slide {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-controls {
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $spacing-xs;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: relative;         
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    color: $color-primary;
+    font-size: $font-sizes-s;
+    font-weight: bolder;
+    margin-top: 35px;
+}
+
+
+.swiper-pagination {
+    position: static;
+    font-size: $font-sizes-m;
+}
+
+.swiper-pagination-bullet {
+    background-color: $color-primary;
+    opacity: 100%;
+    width: 10px;              
+    height: 10px;              
+}
+
+.swiper-pagination-bullet-active {
+    background: $color-tertiary;
+}
+
+
+.choose-edition-cards {
     @include flex(column, center, center);
     gap: $spacing-xl;
     padding: $spacing-l;
+    width: 100%;
+    max-width: 525px;
+    box-sizing: border-box;
 }
 
-.edition-image-container { 
-    width: 250px;
+.edition-image-container {
+    width: auto;
     height: auto;
 }
 
@@ -380,24 +433,18 @@
     }
 
     .edition-image-container {
-        width: 300px;
-    }
-
-    .inclusion-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: $spacing-xl;
+        width: 100%;
     }
 }
 
 @media (max-width: 768px) {
     .edition-tabs {
         flex-direction: column;
-        gap: $spacing-s;
     }
 
     .edition-tab {
         width: 100%;
-        max-width: 300px;
+        font-size: $font-sizes-m;
     }
 
     .platform-buttons {
@@ -414,17 +461,28 @@
         }
     }
 
+    .choose-edition-container {
+        flex-direction: column;
+    }
+
     .edition-title {
         font-size: $font-sizes-l;
     }
 
-    .inclusion-grid {
-        grid-template-columns: 1fr;
+    .inclusion-title {
+        font-size: $font-sizes-m;
+    }
+
+    .inclusion-features {
+        @include flex(column, center, center);
+        gap: $spacing-s;
+        font-size: $font-sizes-xs;
     }
 
     .faq-title {
         font-size: $font-sizes-l;
     }
+
 }
 
 @media (max-width: 480px) {
@@ -435,8 +493,30 @@
         padding: $spacing-xl 0;
     }
 
+    .edition-cards-container{
+        padding: $spacing-xs;
+    }
+
     .edition-card-layout {
         padding: 0 $spacing-l;
+    }
+
+    .inclusion-title {
+        font-size: $font-sizes-s;
+    }
+
+    .inclusion-item{
+        padding: $spacing-xs;
+    }
+
+    .inclusion-features {
+        @include flex(column, center, center);
+        gap: $spacing-s;
+
+        li{
+          font-size: 14px;  
+        }
+        
     }
 
     .primary-buy-button {
