@@ -1,0 +1,102 @@
+.footer{
+  background-color: #000000;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  padding: 64px 80px;
+}
+
+.footer-socials{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 54px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-social-icon {
+  width: 54px;
+  height: 54px;
+}
+
+.footer-nba2klogo {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-2klogo-icon {
+  width: 74px;
+  height: auto;
+}
+
+.footer-nbalogo-icon{
+  width: 74px;
+  height: auto;
+}
+
+.footer-esrblogo-icon{
+  max-width: 200px;
+  width: auto;
+  height: auto;
+}
+
+.footer-links{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 30px;
+  padding: 0 300px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: "SharpGrotesk", sans-serif;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.footer-links a:hover {
+  color: #E30101;
+}
+
+.footer-copyright {
+  color: #FFFFFF;
+  font-size: 20px;
+  text-align: left;
+  line-height: normal;
+}
+
+/* Mobile (<= 768px) */
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 20px;
+  }
+  .footer-links {
+    padding: 0;
+    gap: 16px;
+    flex-direction: column;
+  }
+  .footer-links a {
+    font-size: 22px;
+  }
+  .footer-copyright {
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+/* Very small devices (<= 480px) */
+@media (max-width: 480px) {
+  .footer-links a {
+    font-size: 18px;
+  }
+}
